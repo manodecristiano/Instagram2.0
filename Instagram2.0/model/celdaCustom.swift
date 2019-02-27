@@ -10,9 +10,9 @@ import UIKit
 
 class celdaCustom: UITableViewCell {
  
-    @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var imagenPerroCell: UIImageView!
     
-    @IBOutlet weak var nombre: UILabel!
+    @IBOutlet weak var nombrePerroCell: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

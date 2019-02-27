@@ -31,11 +31,11 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="dognotFound" translatesAutoresizingMaskIntoConstraints="NO" id="iBU-fU-pMB">
-                                                    <rect key="frame" x="15" y="19" width="165" height="105"/>
+                                                    <rect key="frame" x="15" y="19" width="165" height="140"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1hE-hU-m6h">
-                                                    <rect key="frame" x="171" y="61" width="189" height="45"/>
+                                                    <rect key="frame" x="171" y="60" width="189" height="45"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -45,8 +45,8 @@
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="img" destination="iBU-fU-pMB" id="vOI-uA-nVp"/>
-                                            <outlet property="nombre" destination="1hE-hU-m6h" id="1FS-mu-JxO"/>
+                                            <outlet property="imagenPerroCell" destination="iBU-fU-pMB" id="k82-CL-bnH"/>
+                                            <outlet property="nombrePerroCell" destination="1hE-hU-m6h" id="HIe-sb-gQm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

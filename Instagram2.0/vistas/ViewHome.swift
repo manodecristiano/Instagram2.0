@@ -21,7 +21,9 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
         let myCell = tableView.dequeueReusableCell(withIdentifier: "myCells", for: indexPath)as! celdaCustom
         
         
-       // myCell.nombreCell?.text = listaRazas[indexPath.row].raza
+        
+         // myCell.ImagenPerroCell?.text = listaRazas[indexPath.row].i
+        myCell.nombrePerroCell?.text = listaRazas[indexPath.row].raza
        
         
         
@@ -29,11 +31,15 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
         return myCell
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160
+    }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         
         let instanciaControllerItem = storyboard!.instantiateViewController(withIdentifier: "detail") as! ViewDetail
-        instanciaControllerItem.nombreRaza?.text = listaRazas[indexPath.row].raza
+        instanciaControllerItem.nombrePerro = listaRazas[indexPath.row].raza
         instanciaControllerItem.pesoRaza?.text = listaRazas[indexPath.row].peso
         
         
