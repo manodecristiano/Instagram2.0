@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		184E074B2226952700107F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E074A2226952700107F43 /* AppDelegate.swift */; };
-		184E074D2226952700107F43 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E074C2226952700107F43 /* ViewController.swift */; };
+		184E074D2226952700107F43 /* ViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E074C2226952700107F43 /* ViewHome.swift */; };
 		184E07502226952700107F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184E074E2226952700107F43 /* Main.storyboard */; };
 		184E07522226952800107F43 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 184E07512226952800107F43 /* Assets.xcassets */; };
 		184E07552226952800107F43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184E07532226952800107F43 /* LaunchScreen.storyboard */; };
 		184E07602226952900107F43 /* Instagram2_0Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E075F2226952900107F43 /* Instagram2_0Tests.swift */; };
 		184E076B2226952900107F43 /* Instagram2_0UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E076A2226952900107F43 /* Instagram2_0UITests.swift */; };
+		184E077B2226963200107F43 /* UITapBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E077A2226963200107F43 /* UITapBarController.swift */; };
+		184E077D222696DD00107F43 /* ViewSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E077C222696DD00107F43 /* ViewSearch.swift */; };
+		184E077F222696EC00107F43 /* ViewAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E077E222696EC00107F43 /* ViewAbout.swift */; };
+		184E07812226970F00107F43 /* ViewPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E07802226970F00107F43 /* ViewPerfil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		184E07472226952700107F43 /* Instagram2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184E074A2226952700107F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		184E074C2226952700107F43 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		184E074C2226952700107F43 /* ViewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHome.swift; sourceTree = "<group>"; };
 		184E074F2226952700107F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		184E07512226952800107F43 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		184E07542226952800107F43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		184E07662226952900107F43 /* Instagram2.0UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Instagram2.0UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		184E076A2226952900107F43 /* Instagram2_0UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instagram2_0UITests.swift; sourceTree = "<group>"; };
 		184E076C2226952900107F43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		184E077A2226963200107F43 /* UITapBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITapBarController.swift; sourceTree = "<group>"; };
+		184E077C222696DD00107F43 /* ViewSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSearch.swift; sourceTree = "<group>"; };
+		184E077E222696EC00107F43 /* ViewAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAbout.swift; sourceTree = "<group>"; };
+		184E07802226970F00107F43 /* ViewPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPerfil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +105,9 @@
 		184E07492226952700107F43 /* Instagram2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				184E07792226961500107F43 /* controller */,
+				184E0778222695FB00107F43 /* vistas */,
 				184E074A2226952700107F43 /* AppDelegate.swift */,
-				184E074C2226952700107F43 /* ViewController.swift */,
 				184E074E2226952700107F43 /* Main.storyboard */,
 				184E07512226952800107F43 /* Assets.xcassets */,
 				184E07532226952800107F43 /* LaunchScreen.storyboard */,
@@ -123,6 +132,25 @@
 				184E076C2226952900107F43 /* Info.plist */,
 			);
 			path = Instagram2.0UITests;
+			sourceTree = "<group>";
+		};
+		184E0778222695FB00107F43 /* vistas */ = {
+			isa = PBXGroup;
+			children = (
+				184E074C2226952700107F43 /* ViewHome.swift */,
+				184E077C222696DD00107F43 /* ViewSearch.swift */,
+				184E07802226970F00107F43 /* ViewPerfil.swift */,
+				184E077E222696EC00107F43 /* ViewAbout.swift */,
+			);
+			path = vistas;
+			sourceTree = "<group>";
+		};
+		184E07792226961500107F43 /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				184E077A2226963200107F43 /* UITapBarController.swift */,
+			);
+			path = controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,7 +284,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				184E074D2226952700107F43 /* ViewController.swift in Sources */,
+				184E077D222696DD00107F43 /* ViewSearch.swift in Sources */,
+				184E077F222696EC00107F43 /* ViewAbout.swift in Sources */,
+				184E07812226970F00107F43 /* ViewPerfil.swift in Sources */,
+				184E074D2226952700107F43 /* ViewHome.swift in Sources */,
+				184E077B2226963200107F43 /* UITapBarController.swift in Sources */,
 				184E074B2226952700107F43 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +465,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 346MLAG495;
 				INFOPLIST_FILE = Instagram2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +483,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 346MLAG495;
 				INFOPLIST_FILE = Instagram2.0/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
