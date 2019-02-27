@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1832592B2226BF6000745CDC /* celdaCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832592A2226BF6000745CDC /* celdaCustom.swift */; };
+		1832592D2226BF6A00745CDC /* Perro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832592C2226BF6A00745CDC /* Perro.swift */; };
+		1832592F2226BFBD00745CDC /* ViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832592E2226BFBD00745CDC /* ViewDetail.swift */; };
 		184E074B2226952700107F43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E074A2226952700107F43 /* AppDelegate.swift */; };
 		184E074D2226952700107F43 /* ViewHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E074C2226952700107F43 /* ViewHome.swift */; };
 		184E07502226952700107F43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 184E074E2226952700107F43 /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1832592A2226BF6000745CDC /* celdaCustom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = celdaCustom.swift; sourceTree = "<group>"; };
+		1832592C2226BF6A00745CDC /* Perro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Perro.swift; sourceTree = "<group>"; };
+		1832592E2226BFBD00745CDC /* ViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetail.swift; sourceTree = "<group>"; };
 		184E07472226952700107F43 /* Instagram2.0.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram2.0.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		184E074A2226952700107F43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		184E074C2226952700107F43 /* ViewHome.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewHome.swift; sourceTree = "<group>"; };
@@ -82,6 +88,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		183259292226BF4900745CDC /* model */ = {
+			isa = PBXGroup;
+			children = (
+				1832592C2226BF6A00745CDC /* Perro.swift */,
+				1832592A2226BF6000745CDC /* celdaCustom.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		184E073E2226952700107F43 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +120,7 @@
 		184E07492226952700107F43 /* Instagram2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				183259292226BF4900745CDC /* model */,
 				184E07792226961500107F43 /* controller */,
 				184E0778222695FB00107F43 /* vistas */,
 				184E074A2226952700107F43 /* AppDelegate.swift */,
@@ -141,6 +157,7 @@
 				184E077C222696DD00107F43 /* ViewSearch.swift */,
 				184E07802226970F00107F43 /* ViewPerfil.swift */,
 				184E077E222696EC00107F43 /* ViewAbout.swift */,
+				1832592E2226BFBD00745CDC /* ViewDetail.swift */,
 			);
 			path = vistas;
 			sourceTree = "<group>";
@@ -285,10 +302,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				184E077D222696DD00107F43 /* ViewSearch.swift in Sources */,
+				1832592F2226BFBD00745CDC /* ViewDetail.swift in Sources */,
 				184E077F222696EC00107F43 /* ViewAbout.swift in Sources */,
+				1832592B2226BF6000745CDC /* celdaCustom.swift in Sources */,
 				184E07812226970F00107F43 /* ViewPerfil.swift in Sources */,
 				184E074D2226952700107F43 /* ViewHome.swift in Sources */,
 				184E077B2226963200107F43 /* UITapBarController.swift in Sources */,
+				1832592D2226BF6A00745CDC /* Perro.swift in Sources */,
 				184E074B2226952700107F43 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
