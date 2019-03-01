@@ -14,6 +14,7 @@ class celdaCustom: UITableViewCell {
     
     @IBOutlet weak var nombrePerroCell: UILabel!
     
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -32,8 +32,32 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return 185
     }
+    
+    
+    //funcion de SWIPE-ACTION
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let isLiked = likedCategory(indexPath:indexPath)
+        //Adjuntamos todas las opciones que necesitemos en modo de array
+        return UISwipeActionsConfiguration(actions: [isLiked])
+    }
+    
+    func likedCategory(indexPath:IndexPath) -> UIContextualAction{
+        
+        let action = UIContextualAction(style: .normal, title: "Like") {
+           (action, view, completion) in self.tableView.reloadRows(at: [indexPath], with: .none)
+            action.title = "You like this!"
+            completion(true)
+        }
+        
+        action.image = UIImage(named: "like")
+        return action
+    }
+    
+    
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
