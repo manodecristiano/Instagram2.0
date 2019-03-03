@@ -14,7 +14,8 @@ class celdaCustom: UITableViewCell {
     
     @IBOutlet weak var nombrePerroCell: UILabel!
     
-
+    @IBOutlet weak var buttonLike: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,6 +27,10 @@ class celdaCustom: UITableViewCell {
         // Configure the view for the selected state
     }
 
+
+        
+    
+    
    
     
 

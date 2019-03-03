@@ -11,7 +11,7 @@ import UIKit
 
 class ViewSearch : UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-   
+var listaFiltrada = [String]()
     
     @IBOutlet weak var tableViewSearch: UITableView!
     
@@ -45,22 +45,25 @@ class ViewSearch : UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         func tableView(_ tableViewSearch: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
             
-            let isLiked = likedCategory(indexPath:indexPath)
+            let isLiked = liked(indexPath:indexPath)
             //Adjuntamos todas las opciones que necesitemos en modo de array
             return UISwipeActionsConfiguration(actions: [isLiked])
         }
         
-        func likedCategory(indexPath:IndexPath) -> UIContextualAction{
-            
-            let action = UIContextualAction(style: .normal, title: "Like") {
-                (action, view, completion) in self.tableViewSearch.reloadRows(at: [indexPath], with: .none)
-                action.title = "You like this!"
-                completion(true)
-            }
-            
-            action.image = UIImage(named: "like")
-            return action
+    
+    func liked(indexPath:IndexPath) -> UIContextualAction{
+        
+        let action = UIContextualAction(style: .normal, title: "Like") { (action, view, completion) in
+            listaRazas[indexPath.row].isLiked = !listaRazas[indexPath.row].isLiked
+            self.tableViewSearch.reloadRows(at: [indexPath], with: .none)
+            action.title = "You like this!"
+            completion(true)
         }
+        action.title = listaRazas[indexPath.row].isLiked ? "Dislike!" : "Like!"
+        action.backgroundColor =  listaRazas[indexPath.row].isLiked ? UIColor.black : UIColor.red
+        
+        return action
+    }
         
         
         
@@ -81,18 +84,7 @@ class ViewSearch : UIViewController,UITableViewDelegate,UITableViewDataSource {
             
         }
         
-        
-        
-        var listaRazas:[Perro] = [
-            Perro(raza: "Terranova", peso: "50-60kg"),
-            Perro(raza: "Mastin", peso: "50-60kg"),
-            Perro(raza: "Labrador", peso: "40-55kg"),
-            Perro(raza: "Dalmata", peso: "40-50kg"),
-            Perro(raza: "Braco", peso: "30-40kg"),
-            Perro(raza: "Chihuaua", peso: "5-10kg"),
-            Perro(raza: "Dogo Alemán", peso: "50-60kg"),
-            Perro(raza: "Boxer", peso: "30-40kg"),
-            Perro(raza: "Bulldog inglés", peso: "45-55kg") ]
+
         
         
         
