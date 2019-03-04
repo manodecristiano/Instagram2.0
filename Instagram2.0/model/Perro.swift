@@ -8,7 +8,7 @@
 
 
 import Foundation
-class Perro{
+class Perro : Equatable{
     
     
     var raza: String
@@ -24,4 +24,10 @@ class Perro{
     func devolverNombre() -> String{
         return self.raza
     }
+    
+//overrite de la función comparar
+    static func == (lhs: Perro, rhs: Perro) -> Bool{
+        return lhs.raza == rhs.raza
+        }
+   
 }

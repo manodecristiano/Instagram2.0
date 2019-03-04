@@ -22,18 +22,21 @@ var listaRazas:[Perro] = [
 
 var arrayFavoritos: Array <Perro> = []
 
+
+
+
+
 class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
-  
-
-
-    
+    @IBOutlet weak var mensajeLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
+
     
     //NÚMERO DE COLUMNAS
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
         return listaRazas.count
     }
     
@@ -58,15 +61,17 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         //El buttonlike esta escondido si es liked o no
         myCell.buttonLike.isHidden = listaRazas[indexPath.row].isLiked ? false : true
+        
+        
+   
+        
+        
         return myCell
     }
     
     //FUNCIÓN AL CLIKCAR EL BOTÓN
     @objc func clickHeart(sender: UIButton){
-      
-      //añadimos al array de favoritos el Perro numero (el numero del tag del button)
-       arrayFavoritos.append(listaRazas[sender.tag])
-        
+
         print("Has pulsado el botón \(sender.tag)")
       
     }
@@ -106,13 +111,24 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
         
         let action = UIContextualAction(style: .normal, title: "Like") { (action, view, completion) in
             listaRazas[indexPath.row].isLiked = !listaRazas[indexPath.row].isLiked
+            
             self.tableView.reloadRows(at: [indexPath], with: .none)
             action.title = "You like this!"
             completion(true)
         }
            action.title = listaRazas[indexPath.row].isLiked ? "Dislike!" : "Like"
             action.backgroundColor =  listaRazas[indexPath.row].isLiked ? UIColor.black : UIColor.red
-      
+        
+
+
+        
+       if let index = arrayFavoritos.index(of: listaRazas[indexPath.row]) {
+            arrayFavoritos.remove(at: index)
+           // mostrarAlerta(title: "BORRADO", message:"Has borrado el perro \( listaRazas[indexPath.row].raza)" )
+        }else{
+            arrayFavoritos.append(listaRazas[indexPath.row])
+           // mostrarAlerta(title: "AÑADIDO", message:"Has agregado el perro \( listaRazas[indexPath.row].raza)" )
+        }
         return action
     }
     
@@ -120,14 +136,30 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
     
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+ 
         tableView.delegate = self
         tableView.dataSource = self
+        
+
     }
     
+    
+    
+    func mostrarAlerta(title: String, message: String) {
+        
+        let alertaGuia = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        
+        let OK = UIAlertAction(title: "OK", style: .default, handler: {(action) in
+            
+            self.mensajeLabel.text = ""
+        })
+        
+        alertaGuia.addAction(OK)
+        present(alertaGuia, animated: true, completion: nil)
+        
+    }
     
 }
 

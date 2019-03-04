@@ -13,23 +13,41 @@ class ViewSearch : UIViewController,UITableViewDelegate,UITableViewDataSource {
     
 var listaFiltrada = [String]()
     
+    
+    
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    var filterMovies:[Perro] = [Perro]()
+    var isSearching:Bool = false
+    
+    
     @IBOutlet weak var tableViewSearch: UITableView!
+    
     
         //Número de columnas
         func tableView(_ tableViewSearch: UITableView, numberOfRowsInSection section: Int) -> Int {
-            return listaRazas.count
+           
+            return !isSearching ? listaRazas.count : filterMovies.count
+
+            //return arrayFavoritos.count
         }
+    
+    
         //Qué información va ha ir dentro de la row
         func tableView(_ tableViewSearch: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
             //enlazar con la celda para poder entrar en todas las propiedades de tu Celda
             let myCell = tableViewSearch.dequeueReusableCell(withIdentifier: "myCellsSearch", for: indexPath)as! TableViewCellSearch
-            
-            
-            
             // myCell.ImagenPerroCell?.text = listaRazas[indexPath.row].i
-            myCell.nombreSearch.text = listaRazas[indexPath.row].raza
+            myCell.nombreSearch.text = arrayFavoritos[indexPath.row].raza
             
+            
+            if isSearching {
+                myCell.imgMovie.image = filterMovies[indexPath.row].img
+                myCell.lblTitleMovie.text = filterMovies[indexPath.row].title
+            }else{
+                myCell.imgMovie.image = listaRazas[indexPath.row].img
+                myCell.lblTitleMovie.text = listaRazas[indexPath.row].title
+            }
             
             
             
@@ -42,7 +60,6 @@ var listaFiltrada = [String]()
         
         
         //funcion de SWIPE-ACTION
-        
         func tableView(_ tableViewSearch: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
             
             let isLiked = liked(indexPath:indexPath)
@@ -54,13 +71,13 @@ var listaFiltrada = [String]()
     func liked(indexPath:IndexPath) -> UIContextualAction{
         
         let action = UIContextualAction(style: .normal, title: "Like") { (action, view, completion) in
-            listaRazas[indexPath.row].isLiked = !listaRazas[indexPath.row].isLiked
+            arrayFavoritos[indexPath.row].isLiked = !arrayFavoritos[indexPath.row].isLiked
             self.tableViewSearch.reloadRows(at: [indexPath], with: .none)
             action.title = "You like this!"
             completion(true)
         }
-        action.title = listaRazas[indexPath.row].isLiked ? "Dislike!" : "Like!"
-        action.backgroundColor =  listaRazas[indexPath.row].isLiked ? UIColor.black : UIColor.red
+        action.title = arrayFavoritos[indexPath.row].isLiked ? "Dislike!" : "Like!"
+        action.backgroundColor =  arrayFavoritos[indexPath.row].isLiked ? UIColor.black : UIColor.red
         
         return action
     }
@@ -69,19 +86,15 @@ var listaFiltrada = [String]()
         
         func tableView(_ tableViewSearch: UITableView, didSelectRowAt indexPath: IndexPath) {
             
-            
             let instanciaControllerItem = storyboard!.instantiateViewController(withIdentifier: "detail") as! ViewDetail
-            instanciaControllerItem.nombrePerro = listaRazas[indexPath.row].raza
-            instanciaControllerItem.pesoRaza?.text = listaRazas[indexPath.row].peso
-            
+            instanciaControllerItem.nombrePerro = arrayFavoritos[indexPath.row].raza
+            instanciaControllerItem.pesoRaza?.text = arrayFavoritos[indexPath.row].peso
             
             let backItem = UIBarButtonItem()
             backItem.title = "Volver"
             navigationItem.backBarButtonItem = backItem
             
-            
             self.navigationController?.pushViewController(instanciaControllerItem, animated: true)
-            
         }
         
 
@@ -95,9 +108,12 @@ var listaFiltrada = [String]()
         
         override func viewDidLoad() {
             super.viewDidLoad()
-            // Do any additional setup after loading the view, typically from a nib.
+    
             tableViewSearch.delegate = self
             tableViewSearch.dataSource = self
+            
+            searchBar.delegate = self
+            searchBar.placeholder = "Introduce película a buscar"
         }
         
         
