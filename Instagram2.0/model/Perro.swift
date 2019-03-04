@@ -10,12 +10,12 @@
 import Foundation
 class Perro : Equatable{
     
-    
     var raza: String
     var peso: String
      var isLiked:Bool
     
     init(raza:String,peso:String, isLiked:Bool){
+      
         self.raza = raza
         self.peso = peso
         self.isLiked = isLiked

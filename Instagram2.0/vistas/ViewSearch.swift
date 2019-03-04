@@ -9,17 +9,12 @@
 import Foundation
 import UIKit
 
-class ViewSearch : UIViewController,UITableViewDelegate,UITableViewDataSource {
-    
-var listaFiltrada = [String]()
-    
+class ViewSearch : UIViewController,UITableViewDelegate,UITableViewDataSource,UISearchBarDelegate{
     
     
     @IBOutlet weak var searchBar: UISearchBar!
-    
-    var filterMovies:[Perro] = [Perro]()
+    var listaFiltrada:[Perro] = [Perro]()
     var isSearching:Bool = false
-    
     
     @IBOutlet weak var tableViewSearch: UITableView!
     
@@ -27,9 +22,7 @@ var listaFiltrada = [String]()
         //Número de columnas
         func tableView(_ tableViewSearch: UITableView, numberOfRowsInSection section: Int) -> Int {
            
-            return !isSearching ? listaRazas.count : filterMovies.count
-
-            //return arrayFavoritos.count
+        return !isSearching ? arrayFavoritos.count : listaFiltrada.count
         }
     
     
@@ -37,19 +30,17 @@ var listaFiltrada = [String]()
         func tableView(_ tableViewSearch: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             //enlazar con la celda para poder entrar en todas las propiedades de tu Celda
             let myCell = tableViewSearch.dequeueReusableCell(withIdentifier: "myCellsSearch", for: indexPath)as! TableViewCellSearch
-            // myCell.ImagenPerroCell?.text = listaRazas[indexPath.row].i
+            
+            // myCell.ImagenPerroCell?.text = listaRazas[indexPath.row].img
             myCell.nombreSearch.text = arrayFavoritos[indexPath.row].raza
             
-            
             if isSearching {
-                myCell.imgMovie.image = filterMovies[indexPath.row].img
-                myCell.lblTitleMovie.text = filterMovies[indexPath.row].title
+                //myCell.imagenSearch.image = listaFiltrada[indexPath.row].img
+                myCell.nombreSearch.text = listaFiltrada[indexPath.row].raza
             }else{
-                myCell.imgMovie.image = listaRazas[indexPath.row].img
-                myCell.lblTitleMovie.text = listaRazas[indexPath.row].title
+               // myCell.imagenSearch.image = listaRazas[indexPath.row].img
+                myCell.nombreSearch.text = listaRazas[indexPath.row].raza
             }
-            
-            
             
             return myCell
         }
@@ -57,7 +48,8 @@ var listaFiltrada = [String]()
         func tableView(_ tableViewSearch: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 185
         }
-        
+    
+    
         
         //funcion de SWIPE-ACTION
         func tableView(_ tableViewSearch: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
@@ -96,11 +88,26 @@ var listaFiltrada = [String]()
             
             self.navigationController?.pushViewController(instanciaControllerItem, animated: true)
         }
+    
+    
+    
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        /* FILTRADO SOLO POR EL PRINCIPIO DEL TÍTULO
+         filterMovies = listMovies.filter({$0.title.prefix(searchText.count) == searchText})
+         */
         
-
+        //FILTRADO POR CUALQUIER CONTENIDO DEL TÍTULO
+        //filterMovies = listMovies.filter({$0.title.lowercased().contains(searchText.lowercased())})
         
+        listaFiltrada = listaRazas.filter({ (perro) -> Bool in
+            return perro.raza.lowercased().contains(searchText.lowercased())
+        })
         
-        
+        isSearching = searchText != "" ? true : false
+        tableViewSearch.reloadData()
+    }
+    
         
         
 
@@ -113,7 +120,7 @@ var listaFiltrada = [String]()
             tableViewSearch.dataSource = self
             
             searchBar.delegate = self
-            searchBar.placeholder = "Introduce película a buscar"
+            searchBar.placeholder = "Introduce tu Favorito a buscar"
         }
         
         
