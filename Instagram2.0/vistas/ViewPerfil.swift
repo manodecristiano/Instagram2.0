@@ -41,7 +41,10 @@ class ViewPerfil : UIViewController,UICollectionViewDataSource,UICollectionViewD
     }
     
     
-    
+    override
+    func viewDidAppear(_ animated: Bool) {
+        collectionFav.reloadData()
+    }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
@@ -68,7 +71,7 @@ class ViewPerfil : UIViewController,UICollectionViewDataSource,UICollectionViewD
     
 
 override func viewDidLoad() {
-    
+    collectionFav.backgroundColor = #colorLiteral(red: 0.4392156899, green: 0.01176470611, blue: 0.1921568662, alpha: 1)
     labelLikes.text = ("\(arrayFavoritos.count) likes")
     collectionFav.delegate = self
     collectionFav.dataSource = self
