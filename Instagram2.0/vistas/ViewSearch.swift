@@ -46,7 +46,7 @@ class ViewSearch : UIViewController,UITableViewDelegate,UITableViewDataSource,UI
         }
         
         func tableView(_ tableViewSearch: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-            return 185
+            return 100
         }
     
     
