@@ -8,7 +8,7 @@
 
 import UIKit
 
-class celdaCustom: UITableViewCell {
+class TableViewCellHome: UITableViewCell {
  
     @IBOutlet weak var imagenPerroCell: UIImageView!
     

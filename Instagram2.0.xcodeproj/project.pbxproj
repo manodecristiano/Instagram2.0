@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1812BEDF222FD96A009EEAB8 /* TableViewCellAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BEDE222FD96A009EEAB8 /* TableViewCellAbout.swift */; };
+		1812BEE1222FDC83009EEAB8 /* Persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BEE0222FDC83009EEAB8 /* Persona.swift */; };
 		181323412229AA8400059144 /* TableViewCellSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181323402229AA8400059144 /* TableViewCellSearch.swift */; };
 		181FD073222E949100DDA0DF /* CollectionReusableViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FD072222E949100DDA0DF /* CollectionReusableViewCustom.swift */; };
 		181FD077222E9AD400DDA0DF /* CollectionViewCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FD076222E9AD400DDA0DF /* CollectionViewCellCustom.swift */; };
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1812BEDE222FD96A009EEAB8 /* TableViewCellAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellAbout.swift; sourceTree = "<group>"; };
+		1812BEE0222FDC83009EEAB8 /* Persona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persona.swift; sourceTree = "<group>"; };
 		181323402229AA8400059144 /* TableViewCellSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSearch.swift; sourceTree = "<group>"; };
 		181FD072222E949100DDA0DF /* CollectionReusableViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableViewCustom.swift; sourceTree = "<group>"; };
 		181FD076222E9AD400DDA0DF /* CollectionViewCellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellCustom.swift; sourceTree = "<group>"; };
@@ -99,6 +103,7 @@
 			children = (
 				181323402229AA8400059144 /* TableViewCellSearch.swift */,
 				1832592A2226BF6000745CDC /* TableViewCellHome.swift */,
+				1812BEDE222FD96A009EEAB8 /* TableViewCellAbout.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -107,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				1832592C2226BF6A00745CDC /* Perro.swift */,
+				1812BEE0222FDC83009EEAB8 /* Persona.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -324,7 +330,9 @@
 				181FD077222E9AD400DDA0DF /* CollectionViewCellCustom.swift in Sources */,
 				184E077F222696EC00107F43 /* ViewAbout.swift in Sources */,
 				181FD073222E949100DDA0DF /* CollectionReusableViewCustom.swift in Sources */,
+				1812BEE1222FDC83009EEAB8 /* Persona.swift in Sources */,
 				1832592B2226BF6000745CDC /* TableViewCellHome.swift in Sources */,
+				1812BEDF222FD96A009EEAB8 /* TableViewCellAbout.swift in Sources */,
 				184E07812226970F00107F43 /* ViewPerfil.swift in Sources */,
 				184E074D2226952700107F43 /* ViewHome.swift in Sources */,
 				184E077B2226963200107F43 /* UITapBarController.swift in Sources */,

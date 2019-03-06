@@ -12,9 +12,9 @@ class CollectionViewCellCustom: UICollectionViewCell {
     
     
     
-    @IBOutlet weak var imagenCollCustom: UIImageView!
+    @IBOutlet weak var imagenCollectionCell: UIImageView!
     
-    @IBOutlet weak var labelCollCustom: UILabel!
+    @IBOutlet weak var labelCollectionCell: UILabel!
     
     
 }

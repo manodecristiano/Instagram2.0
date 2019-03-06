@@ -17,7 +17,8 @@ class ViewPerfil : UIViewController,UICollectionViewDataSource,UICollectionViewD
  
   
     
- 
+    @IBOutlet weak var labelLikes: UILabel!
+    
     @IBOutlet weak var collectionFav: UICollectionView!
     
 
@@ -42,8 +43,33 @@ class ViewPerfil : UIViewController,UICollectionViewDataSource,UICollectionViewD
     
     
     
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        var view:UICollectionReusableView? = nil
+        
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            let headerSection = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "headerSection", for: indexPath) as! CollectionReusableViewCustom
+            
+            headerSection.labelReusable.text = "Favoritos"
+            
+            view = headerSection
+        default:
+            print("Sin cabecera")
+              print("Has pulsado el botón \(arrayFavoritos.count)")
+        }
+        
+        return view!
+    }
+    
+    
+  
+    
+    
 
 override func viewDidLoad() {
+    
+    labelLikes.text = ("\(arrayFavoritos.count) likes")
     collectionFav.delegate = self
     collectionFav.dataSource = self
     super.viewDidLoad()

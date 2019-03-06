@@ -45,7 +45,7 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         //enlace con la celda para poder entrar en todas las propiedades de la Celda
-        let myCell = tableView.dequeueReusableCell(withIdentifier: "myCells", for: indexPath)as! celdaCustom
+        let myCell = tableView.dequeueReusableCell(withIdentifier: "myCells", for: indexPath)as! TableViewCellHome
         
         // myCell.ImagenPerroCell?.text = listaRazas[indexPath.row].i
         myCell.nombrePerroCell?.text = listaRazas[indexPath.row].raza
