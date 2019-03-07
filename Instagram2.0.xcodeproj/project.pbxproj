@@ -12,6 +12,8 @@
 		181323412229AA8400059144 /* TableViewCellSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181323402229AA8400059144 /* TableViewCellSearch.swift */; };
 		181FD073222E949100DDA0DF /* CollectionReusableViewCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FD072222E949100DDA0DF /* CollectionReusableViewCustom.swift */; };
 		181FD077222E9AD400DDA0DF /* CollectionViewCellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181FD076222E9AD400DDA0DF /* CollectionViewCellCustom.swift */; };
+		18223D962231428200F6985A /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18223D952231428200F6985A /* Tools.swift */; };
+		18223D99223142D700F6985A /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18223D98223142D700F6985A /* CSV.swift */; };
 		1832592B2226BF6000745CDC /* TableViewCellHome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832592A2226BF6000745CDC /* TableViewCellHome.swift */; };
 		1832592D2226BF6A00745CDC /* Perro.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832592C2226BF6A00745CDC /* Perro.swift */; };
 		1832592F2226BFBD00745CDC /* ViewDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1832592E2226BFBD00745CDC /* ViewDetail.swift */; };
@@ -51,6 +53,8 @@
 		181323402229AA8400059144 /* TableViewCellSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSearch.swift; sourceTree = "<group>"; };
 		181FD072222E949100DDA0DF /* CollectionReusableViewCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionReusableViewCustom.swift; sourceTree = "<group>"; };
 		181FD076222E9AD400DDA0DF /* CollectionViewCellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCellCustom.swift; sourceTree = "<group>"; };
+		18223D952231428200F6985A /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		18223D98223142D700F6985A /* CSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
 		1832592A2226BF6000745CDC /* TableViewCellHome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellHome.swift; sourceTree = "<group>"; };
 		1832592C2226BF6A00745CDC /* Perro.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Perro.swift; sourceTree = "<group>"; };
 		1832592E2226BFBD00745CDC /* ViewDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDetail.swift; sourceTree = "<group>"; };
@@ -108,6 +112,14 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		18223D97223142AC00F6985A /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				18223D98223142D700F6985A /* CSV.swift */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
 		183259292226BF4900745CDC /* model */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +152,7 @@
 		184E07492226952700107F43 /* Instagram2.0 */ = {
 			isa = PBXGroup;
 			children = (
+				18223D97223142AC00F6985A /* Libraries */,
 				181FD071222E93FE00DDA0DF /* Cells */,
 				183259292226BF4900745CDC /* model */,
 				184E07792226961500107F43 /* controller */,
@@ -189,6 +202,7 @@
 				184E077A2226963200107F43 /* UITapBarController.swift */,
 				181FD072222E949100DDA0DF /* CollectionReusableViewCustom.swift */,
 				181FD076222E9AD400DDA0DF /* CollectionViewCellCustom.swift */,
+				18223D952231428200F6985A /* Tools.swift */,
 			);
 			path = controller;
 			sourceTree = "<group>";
@@ -324,6 +338,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18223D99223142D700F6985A /* CSV.swift in Sources */,
 				181323412229AA8400059144 /* TableViewCellSearch.swift in Sources */,
 				184E077D222696DD00107F43 /* ViewSearch.swift in Sources */,
 				1832592F2226BFBD00745CDC /* ViewDetail.swift in Sources */,
@@ -333,6 +348,7 @@
 				1812BEE1222FDC83009EEAB8 /* Persona.swift in Sources */,
 				1832592B2226BF6000745CDC /* TableViewCellHome.swift in Sources */,
 				1812BEDF222FD96A009EEAB8 /* TableViewCellAbout.swift in Sources */,
+				18223D962231428200F6985A /* Tools.swift in Sources */,
 				184E07812226970F00107F43 /* ViewPerfil.swift in Sources */,
 				184E074D2226952700107F43 /* ViewHome.swift in Sources */,
 				184E077B2226963200107F43 /* UITapBarController.swift in Sources */,

@@ -44,6 +44,7 @@ class ViewPerfil : UIViewController,UICollectionViewDataSource,UICollectionViewD
     override
     func viewDidAppear(_ animated: Bool) {
         collectionFav.reloadData()
+            labelLikes.text = ("\(arrayFavoritos.count) likes")
     }
     
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
