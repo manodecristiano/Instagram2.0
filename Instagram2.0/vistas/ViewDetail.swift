@@ -14,18 +14,29 @@ class ViewDetail: UIViewController {
     @IBOutlet weak var imagenRaza: UIImageView!
     @IBOutlet weak var nombreRaza: UILabel!
     @IBOutlet weak var pesoRaza: UILabel!
+    @IBOutlet weak var alturaRaza: UILabel!
     @IBOutlet weak var lugarRaza: UILabel!
     @IBOutlet weak var tipoRaza: UILabel!
     @IBOutlet weak var descripcionRaza: UILabel!
     
+    var imagenPerro:UIImage = UIImage()
     var nombrePerro:String = ""
     var pesoPerro:String = ""
+    var alturaPerro:String = ""
+    var lugarPerro:String = ""
+    var tipoPerro:String = ""
+     var descripcionPerro:String = ""
+    
     
 override func viewDidLoad() {
     super.viewDidLoad()
     
+    imagenRaza.image = imagenPerro
     nombreRaza.text = nombrePerro
     pesoRaza.text = pesoPerro
+    alturaRaza.text = alturaPerro
+    tipoRaza.text = tipoPerro
+    descripcionRaza.text = descripcionPerro
 }
 
 }

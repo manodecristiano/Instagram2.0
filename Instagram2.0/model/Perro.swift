@@ -9,6 +9,7 @@
 
 
 import Foundation
+import UIKit
 class Perro : Equatable{
     
     var raza: String
@@ -23,7 +24,7 @@ class Perro : Equatable{
     
     var isLiked:Bool
     
-    init(raza:String,pais: String,peso:String,altura: String,tipo: String,esperanzaVida: String,colores: String,descripcion: String,imagen: String, isLiked:Bool){
+    init(raza:String,pais: String,peso:String,altura: String,tipo: String,esperanzaVida: String,colores: String,descripcion: String,imagen: UIImage, isLiked:Bool){
       
          self.raza = raza
          self.pais = pais

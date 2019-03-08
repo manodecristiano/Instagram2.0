@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Tools{
     
@@ -29,7 +30,7 @@ class Tools{
                                                     esperanzaVida: row["esperanzaVida"]!,
                                                     colores: row["colores"]!,
                                                     descripcion: row["descripcion"]!,
-                                                    imagen: row["imagen"]!,
+                                                    imagen: ((row["imagen"]! != "" ? UIImage(data: try Data(contentsOf: URL(string: row["imagen"]!)!)) : UIImage(named: "dognotFound"))!),
                                                     isLiked: false)
               
             )}

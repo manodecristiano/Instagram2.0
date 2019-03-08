@@ -49,9 +49,9 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
         //enlace con la celda para poder entrar en todas las propiedades de la Celda
         let myCell = tableView.dequeueReusableCell(withIdentifier: "myCells", for: indexPath)as! TableViewCellHome
         
-        // myCell.ImagenPerroCell?.text = listaRazas[indexPath.row].i
+        myCell.imagenPerroCell.image = listaRazas[indexPath.row].imagen
         myCell.nombrePerroCell?.text = listaRazas[indexPath.row].raza
-        myCell.buttonLike.tag = indexPath.row
+    
         
         //igualamos el identificador tag del boton al numero de la row
         myCell.buttonLike.tag = indexPath.row
@@ -89,9 +89,11 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let instanciaControllerItem = storyboard!.instantiateViewController(withIdentifier: "detail") as! ViewDetail
+        instanciaControllerItem.imagenPerro = listaRazas[indexPath.row].imagen
         instanciaControllerItem.nombrePerro = listaRazas[indexPath.row].raza
         instanciaControllerItem.pesoPerro = listaRazas[indexPath.row].peso
-        instanciaControllerItem.pesoPerro = listaRazas[indexPath.row].peso
+        instanciaControllerItem.alturaPerro = listaRazas[indexPath.row].altura
+        
         
         
         let backItem = UIBarButtonItem()
