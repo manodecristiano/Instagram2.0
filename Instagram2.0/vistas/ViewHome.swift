@@ -8,8 +8,10 @@
 import Foundation
 import UIKit
 
+var listaRazas:[Perro] = [Perro]()
+var tools:Tools = Tools()
 
-var listaRazas:[Perro] = [
+/*var listaRazas:[Perro] = [
     Perro(raza: "Terranova", peso: "50-60kg", isLiked:false),
     Perro(raza: "Mastin", peso: "50-60kg", isLiked:false),
     Perro(raza: "Labrador", peso: "40-55kg", isLiked:false),
@@ -19,7 +21,7 @@ var listaRazas:[Perro] = [
     Perro(raza: "Dogo Alemán", peso: "50-60kg", isLiked:false),
     Perro(raza: "Boxer", peso: "30-40kg", isLiked:false),
     Perro(raza: "Bulldog inglés", peso: "45-55kg", isLiked:false) ]
-
+*/
 var arrayFavoritos: Array <Perro> = []
 
 
@@ -139,6 +141,8 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
  
+        tools.parseCSVBreed(perro: &listaRazas)
+        
         tableView.delegate = self
         tableView.dataSource = self
         
