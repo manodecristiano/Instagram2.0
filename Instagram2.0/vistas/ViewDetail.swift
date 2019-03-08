@@ -19,13 +19,13 @@ class ViewDetail: UIViewController {
     @IBOutlet weak var descripcionRaza: UILabel!
     
     var nombrePerro:String = ""
-    
+    var pesoPerro:String = ""
     
 override func viewDidLoad() {
     super.viewDidLoad()
     
     nombreRaza.text = nombrePerro
-    
+    pesoRaza.text = pesoPerro
 }
 
 }

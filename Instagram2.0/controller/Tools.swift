@@ -13,7 +13,7 @@ class Tools{
     func parseCSVBreed(perro: inout [Perro]) {
         
         //Obtengo el fichero y su tipo
-        let path = Bundle.main.path(forResource: "PerrosAPP", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "perrosUTF8csv", ofType: "csv")!
         
         do{
             
@@ -21,7 +21,16 @@ class Tools{
             let csv = try CSV(contentsOfURL: path)
             
             //Recorro el fichero por filas y lo guardo en el array
-            for row in csv.rows {perro.append(Perro(raza: "nombre", pais: "pais", peso: "peso", altura: "altura", tipo: "tipo", esperanzaVida: "esperanzaVida", colores: "colores", descripcion: "descripcion", imagen: "imagen", isLiked: false)
+            for row in csv.rows {perro.append(Perro(raza: row["nombre"]!,
+                                                    pais: row["pais"]!,
+                                                    peso: row["peso"]!,
+                                                    altura: row["altura"]!,
+                                                    tipo: row["tipo"]!,
+                                                    esperanzaVida: row["esperanzaVida"]!,
+                                                    colores: row["colores"]!,
+                                                    descripcion: row["descripcion"]!,
+                                                    imagen: row["imagen"]!,
+                                                    isLiked: false)
               
             )}
             

@@ -8,6 +8,7 @@
 import Foundation
 
 public class CSV {
+    
     public var headers: [String] = []
     public var rows: [Dictionary<String, String>] = []
     public var columns = Dictionary<String, [String]>()
