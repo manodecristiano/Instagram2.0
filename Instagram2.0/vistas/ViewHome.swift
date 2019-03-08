@@ -91,7 +91,7 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
         let instanciaControllerItem = storyboard!.instantiateViewController(withIdentifier: "detail") as! ViewDetail
         instanciaControllerItem.nombrePerro = listaRazas[indexPath.row].raza
         instanciaControllerItem.pesoPerro = listaRazas[indexPath.row].peso
-             instanciaControllerItem.pesoPerro = listaRazas[indexPath.row].peso
+        instanciaControllerItem.pesoPerro = listaRazas[indexPath.row].peso
         
         
         let backItem = UIBarButtonItem()

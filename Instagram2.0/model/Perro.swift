@@ -19,7 +19,7 @@ class Perro : Equatable{
     var esperanzaVida: String
     var colores: String
     var descripcion: String
-    var imagen: String
+    var imagen: UIImage
     
     var isLiked:Bool
     
