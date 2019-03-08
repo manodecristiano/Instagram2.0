@@ -93,8 +93,8 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
         instanciaControllerItem.nombrePerro = listaRazas[indexPath.row].raza
         instanciaControllerItem.pesoPerro = listaRazas[indexPath.row].peso
         instanciaControllerItem.alturaPerro = listaRazas[indexPath.row].altura
-        
-        
+        instanciaControllerItem.paisPerro = listaRazas[indexPath.row].pais
+        instanciaControllerItem.descripcionPerro = listaRazas[indexPath.row].descripcion
         
         let backItem = UIBarButtonItem()
         backItem.title = "Volver"

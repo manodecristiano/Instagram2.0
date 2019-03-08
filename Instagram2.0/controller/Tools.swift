@@ -14,7 +14,7 @@ class Tools{
     func parseCSVBreed(perro: inout [Perro]) {
         
         //Obtengo el fichero y su tipo
-        let path = Bundle.main.path(forResource: "perrosUTF8csv", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "csvPerros", ofType: "csv")!
         
         do{
             
@@ -34,6 +34,7 @@ class Tools{
                                                     isLiked: false)
               
             )}
+            perro.append(Perro(raza: "humana", pais: "Stonia", peso: "200kg", altura: "1,90", tipo: "estratosferico", esperanzaVida: "1año", colores: "magenta", descripcion: "ninguna", imagen: UIImage(named: "nukaANDyo2")!, isLiked: false))
             
         } catch let error as NSError {
             print("Error decodificando el CSV", error)

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18074B592232CF2700C16710 /* perrosUTF8csv.csv in Resources */ = {isa = PBXBuildFile; fileRef = 18074B582232CF2700C16710 /* perrosUTF8csv.csv */; };
 		1812BEDF222FD96A009EEAB8 /* TableViewCellAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BEDE222FD96A009EEAB8 /* TableViewCellAbout.swift */; };
 		1812BEE1222FDC83009EEAB8 /* Persona.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1812BEE0222FDC83009EEAB8 /* Persona.swift */; };
 		181323412229AA8400059144 /* TableViewCellSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 181323402229AA8400059144 /* TableViewCellSearch.swift */; };
@@ -29,6 +28,7 @@
 		184E077D222696DD00107F43 /* ViewSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E077C222696DD00107F43 /* ViewSearch.swift */; };
 		184E077F222696EC00107F43 /* ViewAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E077E222696EC00107F43 /* ViewAbout.swift */; };
 		184E07812226970F00107F43 /* ViewPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E07802226970F00107F43 /* ViewPerfil.swift */; };
+		18B416392232F22000181DE7 /* csvPerros.csv in Resources */ = {isa = PBXBuildFile; fileRef = 18B416382232F22000181DE7 /* csvPerros.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18074B582232CF2700C16710 /* perrosUTF8csv.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = perrosUTF8csv.csv; sourceTree = "<group>"; };
 		1812BEDE222FD96A009EEAB8 /* TableViewCellAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellAbout.swift; sourceTree = "<group>"; };
 		1812BEE0222FDC83009EEAB8 /* Persona.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persona.swift; sourceTree = "<group>"; };
 		181323402229AA8400059144 /* TableViewCellSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellSearch.swift; sourceTree = "<group>"; };
@@ -77,6 +76,7 @@
 		184E077C222696DD00107F43 /* ViewSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSearch.swift; sourceTree = "<group>"; };
 		184E077E222696EC00107F43 /* ViewAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAbout.swift; sourceTree = "<group>"; };
 		184E07802226970F00107F43 /* ViewPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPerfil.swift; sourceTree = "<group>"; };
+		18B416382232F22000181DE7 /* csvPerros.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = csvPerros.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,7 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				18223D98223142D700F6985A /* CSV.swift */,
-				18074B582232CF2700C16710 /* perrosUTF8csv.csv */,
+				18B416382232F22000181DE7 /* csvPerros.csv */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -314,8 +314,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B416392232F22000181DE7 /* csvPerros.csv in Resources */,
 				184E07552226952800107F43 /* LaunchScreen.storyboard in Resources */,
-				18074B592232CF2700C16710 /* perrosUTF8csv.csv in Resources */,
 				184E07522226952800107F43 /* Assets.xcassets in Resources */,
 				184E07502226952700107F43 /* Main.storyboard in Resources */,
 			);

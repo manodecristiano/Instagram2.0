@@ -15,7 +15,7 @@ class ViewDetail: UIViewController {
     @IBOutlet weak var nombreRaza: UILabel!
     @IBOutlet weak var pesoRaza: UILabel!
     @IBOutlet weak var alturaRaza: UILabel!
-    @IBOutlet weak var lugarRaza: UILabel!
+    @IBOutlet weak var paisRaza: UILabel!
     @IBOutlet weak var tipoRaza: UILabel!
     @IBOutlet weak var descripcionRaza: UILabel!
     
@@ -23,7 +23,7 @@ class ViewDetail: UIViewController {
     var nombrePerro:String = ""
     var pesoPerro:String = ""
     var alturaPerro:String = ""
-    var lugarPerro:String = ""
+    var paisPerro:String = ""
     var tipoPerro:String = ""
      var descripcionPerro:String = ""
     
@@ -35,6 +35,7 @@ override func viewDidLoad() {
     nombreRaza.text = nombrePerro
     pesoRaza.text = pesoPerro
     alturaRaza.text = alturaPerro
+    paisRaza.text = paisPerro
     tipoRaza.text = tipoPerro
     descripcionRaza.text = descripcionPerro
 }
