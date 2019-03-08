@@ -28,6 +28,7 @@
 		184E077D222696DD00107F43 /* ViewSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E077C222696DD00107F43 /* ViewSearch.swift */; };
 		184E077F222696EC00107F43 /* ViewAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E077E222696EC00107F43 /* ViewAbout.swift */; };
 		184E07812226970F00107F43 /* ViewPerfil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184E07802226970F00107F43 /* ViewPerfil.swift */; };
+		188DEA402231F7A800E2BBB6 /* PerrosAPP.csv in Resources */ = {isa = PBXBuildFile; fileRef = 188DEA3F2231F7A800E2BBB6 /* PerrosAPP.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		184E077C222696DD00107F43 /* ViewSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewSearch.swift; sourceTree = "<group>"; };
 		184E077E222696EC00107F43 /* ViewAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAbout.swift; sourceTree = "<group>"; };
 		184E07802226970F00107F43 /* ViewPerfil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewPerfil.swift; sourceTree = "<group>"; };
+		188DEA3F2231F7A800E2BBB6 /* PerrosAPP.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = PerrosAPP.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				18223D98223142D700F6985A /* CSV.swift */,
+				188DEA3F2231F7A800E2BBB6 /* PerrosAPP.csv */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 				184E07552226952800107F43 /* LaunchScreen.storyboard in Resources */,
 				184E07522226952800107F43 /* Assets.xcassets in Resources */,
 				184E07502226952700107F43 /* Main.storyboard in Resources */,
+				188DEA402231F7A800E2BBB6 /* PerrosAPP.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

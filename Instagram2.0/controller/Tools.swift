@@ -10,10 +10,10 @@ import Foundation
 
 class Tools{
     
-    func parseCSVBreed(breeds: inout [Perro]) {
+    func parseCSVBreed(perro: inout [Perro]) {
         
         //Obtengo el fichero y su tipo
-        let path = Bundle.main.path(forResource: "fci-breeds", ofType: "csv")!
+        let path = Bundle.main.path(forResource: "PerrosAPP", ofType: "csv")!
         
         do{
             
@@ -21,9 +21,9 @@ class Tools{
             let csv = try CSV(contentsOfURL: path)
             
             //Recorro el fichero por filas y lo guardo en el array
-            for row in csv.rows {
-                breeds.append(Breed(id: row["id"]!, name: row["name"]!, section: row["section"]!, country: row["country"]!, image: row["image"]! != "" ? row["image"]! : "null"))
-            }
+            for row in csv.rows {perro.append(Perro(raza: "nombre", pais: "pais", peso: "peso", altura: "altura", tipo: "tipo", esperanzaVida: "esperanzaVida", colores: "colores", descripcion: "descripcion", imagen: "imagen", isLiked: false)
+              
+            )}
             
         } catch let error as NSError {
             print("Error decodificando el CSV", error)

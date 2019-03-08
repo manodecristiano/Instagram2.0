@@ -11,7 +11,7 @@ public class CSV {
     public var headers: [String] = []
     public var rows: [Dictionary<String, String>] = []
     public var columns = Dictionary<String, [String]>()
-    var delimiter = CharacterSet(charactersIn: ",")
+    var delimiter = CharacterSet(charactersIn: ";")
     
     public init(content: String?, delimiter: CharacterSet, encoding: UInt) throws{
         if let csvStringToParse = content{
@@ -28,7 +28,7 @@ public class CSV {
     }
     
     public convenience init(contentsOfURL url: String) throws {
-        let comma = CharacterSet(charactersIn: ",")
+        let comma = CharacterSet(charactersIn: ";")
         let csvString: String?
         do {
             csvString = try String(contentsOfFile: url, encoding: String.Encoding.utf8)
