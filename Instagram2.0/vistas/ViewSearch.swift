@@ -31,8 +31,9 @@ class ViewSearch : UIViewController,UITableViewDelegate,UITableViewDataSource,UI
             //enlazar con la celda para poder entrar en todas las propiedades de tu Celda
             let myCell = tableViewSearch.dequeueReusableCell(withIdentifier: "myCellsSearch", for: indexPath)as! TableViewCellSearch
             
-            // myCell.ImagenPerroCell?.text = listaRazas[indexPath.row].img
-            myCell.nombreSearch.text = listaRazas[indexPath.row].raza
+             myCell.imagenSearch.image = listaRazas[indexPath.row].imagen
+             myCell.nombreSearch.text = listaRazas[indexPath.row].raza
+             myCell.paisSearch.text = listaRazas[indexPath.row].pais
             
             if isSearching {
                 //myCell.imagenSearch.image = listaFiltrada[indexPath.row].img
@@ -71,6 +72,15 @@ class ViewSearch : UIViewController,UITableViewDelegate,UITableViewDataSource,UI
         action.title = listaRazas[indexPath.row].isLiked ? "Dislike!" : "Like!"
         action.backgroundColor =  listaRazas[indexPath.row].isLiked ? UIColor.black : UIColor.red
         
+        
+        
+        if let index = arrayFavoritos.index(of: listaRazas[indexPath.row]) {
+            arrayFavoritos.remove(at: index)
+            // mostrarAlerta(title: "BORRADO", message:"Has borrado el perro \( listaRazas[indexPath.row].raza)" )
+        }else{
+            arrayFavoritos.append(listaRazas[indexPath.row])
+            // mostrarAlerta(title: "AÑADIDO", message:"Has agregado el perro \( listaRazas[indexPath.row].raza)" )
+        }
         return action
     }
         
@@ -78,15 +88,21 @@ class ViewSearch : UIViewController,UITableViewDelegate,UITableViewDataSource,UI
         
         func tableView(_ tableViewSearch: UITableView, didSelectRowAt indexPath: IndexPath) {
             
-            let instanciaControllerItem = storyboard!.instantiateViewController(withIdentifier: "detail") as! ViewDetail
-            instanciaControllerItem.nombrePerro = listaRazas[indexPath.row].raza
-            instanciaControllerItem.pesoRaza?.text = listaRazas[indexPath.row].peso
+            let detailPerro = storyboard!.instantiateViewController(withIdentifier: "detail") as! ViewDetail
+            detailPerro.imagenPerro = listaRazas[indexPath.row].imagen
+            detailPerro.nombrePerro = listaRazas[indexPath.row].raza
+            detailPerro.pesoPerro = listaRazas[indexPath.row].peso
+            detailPerro.alturaPerro = listaRazas[indexPath.row].altura
+            detailPerro.paisPerro = listaRazas[indexPath.row].pais
+            detailPerro.tipoPerro = listaRazas[indexPath.row].tipo
+            detailPerro.descripcionPerro = listaRazas[indexPath.row].descripcion
+            
             
             let backItem = UIBarButtonItem()
             backItem.title = "Volver"
             navigationItem.backBarButtonItem = backItem
             
-            self.navigationController?.pushViewController(instanciaControllerItem, animated: true)
+            self.navigationController?.pushViewController(detailPerro, animated: true)
         }
     
     

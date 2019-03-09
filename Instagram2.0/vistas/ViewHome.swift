@@ -88,19 +88,20 @@ class ViewHome: UIViewController,UITableViewDelegate,UITableViewDataSource {
     //FUNCIÓN AL CLICKAR UNA ROW
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let instanciaControllerItem = storyboard!.instantiateViewController(withIdentifier: "detail") as! ViewDetail
-        instanciaControllerItem.imagenPerro = listaRazas[indexPath.row].imagen
-        instanciaControllerItem.nombrePerro = listaRazas[indexPath.row].raza
-        instanciaControllerItem.pesoPerro = listaRazas[indexPath.row].peso
-        instanciaControllerItem.alturaPerro = listaRazas[indexPath.row].altura
-        instanciaControllerItem.paisPerro = listaRazas[indexPath.row].pais
-        instanciaControllerItem.descripcionPerro = listaRazas[indexPath.row].descripcion
+        let detailPerro = storyboard!.instantiateViewController(withIdentifier: "detail") as! ViewDetail
+        detailPerro.imagenPerro = listaRazas[indexPath.row].imagen
+        detailPerro.nombrePerro = listaRazas[indexPath.row].raza
+        detailPerro.pesoPerro = listaRazas[indexPath.row].peso
+        detailPerro.alturaPerro = listaRazas[indexPath.row].altura
+        detailPerro.paisPerro = listaRazas[indexPath.row].pais
+         detailPerro.tipoPerro = listaRazas[indexPath.row].tipo
+        detailPerro.descripcionPerro = listaRazas[indexPath.row].descripcion
         
         let backItem = UIBarButtonItem()
         backItem.title = "Volver"
         navigationItem.backBarButtonItem = backItem
         
-        self.navigationController?.pushViewController(instanciaControllerItem, animated: true)
+        self.navigationController?.pushViewController(detailPerro, animated: true)
         
     }
 

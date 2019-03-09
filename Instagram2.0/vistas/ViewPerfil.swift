@@ -32,9 +32,8 @@ class ViewPerfil : UIViewController,UICollectionViewDataSource,UICollectionViewD
         let myCell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCellCollection", for: indexPath) as! CollectionViewCellCustom
         
         myCell.labelCollectionCell.text = arrayFavoritos[indexPath.row].raza
-        
-     // myCell.imageCollectionCell = arrayFavoritos[indexPath.row].img
-        
+        myCell.imagenCollectionCell.image = arrayFavoritos[indexPath.row].imagen
+
         return myCell
         
         
