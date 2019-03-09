@@ -20,11 +20,11 @@ class UITapBarController: UITabBarController {
         
         
         // cambiamos el color si esta seleccionado o no Ajustes comunes del TabBar.
-    UITabBar.appearance().barTintColor = UIColor.black
+    UITabBar.appearance().barTintColor = UIColor.red
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.yellow], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.red], for: .selected)
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.red], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.yellow], for: .normal)
         
         
         print(self.tabBar.items?.count as Any)
@@ -33,30 +33,30 @@ class UITapBarController: UITabBarController {
         //HOME
         tabBarItem = self.tabBar.items![0]
         tabBarItem.image =
-            UIImage(named: "iconoHome.png")?.withRenderingMode(.alwaysOriginal)
+            UIImage(named: "house1.png")?.withRenderingMode(.alwaysOriginal)
         tabBarItem.selectedImage =
-            UIImage(named:"iconoHometocado.png")?.withRenderingMode(.alwaysOriginal)
+            UIImage(named:"house2.png")?.withRenderingMode(.alwaysOriginal)
             tabBarItem.title = "home"
         //SEARCH
         tabBarItem = self.tabBar.items![1]
         tabBarItem.image =
-            UIImage(named: "iconoSearch.png")?.withRenderingMode(.alwaysOriginal)
+            UIImage(named: "search1.png")?.withRenderingMode(.alwaysOriginal)
         tabBarItem.selectedImage =
-            UIImage(named:"iconoSearchtocado.png")?.withRenderingMode(.alwaysOriginal)
+            UIImage(named:"search2.png")?.withRenderingMode(.alwaysOriginal)
             tabBarItem.title = "search"
         //PERFIL
         tabBarItem = self.tabBar.items![2]
         tabBarItem.image =
-            UIImage(named: "iconoPerfil.png")?.withRenderingMode(.alwaysOriginal)
+            UIImage(named: "perfil1.png")?.withRenderingMode(.alwaysOriginal)
         tabBarItem.selectedImage =
-            UIImage(named:"iconoPerfiltocado.png")?.withRenderingMode(.alwaysOriginal)
+            UIImage(named:"perfil2.png")?.withRenderingMode(.alwaysOriginal)
             tabBarItem.title = "perfil"
         //ABOUT
         tabBarItem = self.tabBar.items![3]
         tabBarItem.image =
-            UIImage(named: "iconoAbout.png")?.withRenderingMode(.alwaysOriginal)
+            UIImage(named: "collar1.png")?.withRenderingMode(.alwaysOriginal)
         tabBarItem.selectedImage =
-            UIImage(named:"iconoAbouttocado.png")?.withRenderingMode(.alwaysOriginal)
+            UIImage(named:"collar2.png")?.withRenderingMode(.alwaysOriginal)
             tabBarItem.title = "about"
     }
     
