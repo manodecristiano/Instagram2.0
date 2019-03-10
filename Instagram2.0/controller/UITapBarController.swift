@@ -20,11 +20,11 @@ class UITapBarController: UITabBarController {
         
         
         // cambiamos el color si esta seleccionado o no Ajustes comunes del TabBar.
-    UITabBar.appearance().barTintColor = UIColor.red
+    UITabBar.appearance().barTintColor = #colorLiteral(red: 0.5568627715, green: 0.3529411852, blue: 0.9686274529, alpha: 1)
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.red], for: .selected)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.purple], for: .selected)
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.yellow], for: .normal)
+        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.foregroundColor : UIColor.white], for: .normal)
         
         
         print(self.tabBar.items?.count as Any)

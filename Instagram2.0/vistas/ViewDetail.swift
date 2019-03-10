@@ -17,7 +17,7 @@ class ViewDetail: UIViewController {
     @IBOutlet weak var alturaRaza: UILabel!
     @IBOutlet weak var paisRaza: UILabel!
     @IBOutlet weak var tipoRaza: UILabel!
-    @IBOutlet weak var descripcionRaza: UILabel!
+    @IBOutlet weak var descripcionRaza: UITextView!
     
     var imagenPerro:UIImage = UIImage()
     var nombrePerro:String = ""

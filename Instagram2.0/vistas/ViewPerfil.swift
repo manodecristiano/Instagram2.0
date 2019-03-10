@@ -11,7 +11,7 @@ import Foundation
 
 import UIKit
 
-class ViewPerfil : UIViewController,UICollectionViewDataSource,UICollectionViewDelegate {
+class ViewPerfil : UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UINavigationControllerDelegate,UIImagePickerControllerDelegate {
     
     
  
@@ -21,7 +21,57 @@ class ViewPerfil : UIViewController,UICollectionViewDataSource,UICollectionViewD
     
     @IBOutlet weak var collectionFav: UICollectionView!
     
+    @IBOutlet weak var buttonImage: UIButton!
+    
+    @IBOutlet weak var imagePerfil: UIImageView!
+    
+    var imagePicker = UIImagePickerController()
+    
+    
+    
+    
+    
+    
+    
+    
+    @IBAction func btnClicked() {
+        
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum){
+            print("Button capture")
+            
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum
+            imagePicker.allowsEditing = false
+            
+            present(imagePicker, animated: true, completion: nil)
+        }
+    }
+    
+    
+    
+    
+    
+    func imagePickerController(_ picker: UIImagePickerController!, didFinishPickingImage image: UIImage!, editingInfo: NSDictionary!){
+        self.dismiss(animated: true, completion: { () -> Void in
+            
+        })
+        
+        imagePerfil.image = image
+    }
 
+    
+    
+    
+    
+   
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
